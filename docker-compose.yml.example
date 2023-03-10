@@ -12,17 +12,17 @@ services:
       - ./uploads:/dujiaoka/public/uploads
       - ./storage:/dujiaoka/storage
     ports:
-      - 56789:80
+      - 8088:80
     restart: always
  
   db:
     image: mariadb:focal
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=YOUR_PASSWORD
+      - MYSQL_ROOT_PASSWORD=BPG878
       - MYSQL_DATABASE=dujiaoka
       - MYSQL_USER=dujiaoka
-      - MYSQL_PASSWORD=YOUR_PASSWORD
+      - MYSQL_PASSWORD=BPG878
     volumes:
       - ./mysql:/var/lib/mysql
 
